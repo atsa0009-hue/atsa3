@@ -29,7 +29,9 @@ export function ProductDetail() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-[#3d4f5c] mb-4">Product Not Found</h1>
-          <Link to="/" className="text-[#3d4f5c] hover:underline">
+          <p className="text-gray-600 mb-4">Looking for: {slug}</p>
+          <p className="text-gray-600 mb-4">Found {products.length} products total</p>
+          <Link to="/" className="text-[#3d4f5c] hover:underline font-semibold">
             Return to Home
           </Link>
         </div>
