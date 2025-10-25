@@ -7,22 +7,22 @@ export function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { products, loading } = useProducts();
 
-  console.log('Looking for product with slug:', slug);
-  console.log('Available products:', products.map(p => ({ id: p.id, name: p.name, slug: p.slug })));
-
-  const product = products.find(p => p.slug === slug || p.id === slug || p.name === slug);
-
   const imageAnimation = useScrollAnimation();
   const contentAnimation = useScrollAnimation();
   const relatedAnimation = useScrollAnimation();
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-white">
         <div className="w-12 h-12 border-4 border-[#3d4f5c] border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
+
+  console.log('Looking for product with slug:', slug);
+  console.log('Available products:', products.map(p => ({ id: p.id, name: p.name, slug: p.slug })));
+
+  const product = products.find(p => p.slug === slug || p.id === slug);
 
   if (!product) {
     return (
