@@ -66,17 +66,17 @@ export function ProductDetail() {
               {product.name}
             </h1>
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-600 leading-relaxed">
-                {product.description}
+              <p className="text-xl text-gray-600 leading-relaxed whitespace-pre-wrap">
+                {product.bio || product.description}
               </p>
             </div>
 
-            <div className={`mt-12 p-8 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl transition-all duration-700 delay-300 ${contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-2xl font-bold text-[#3d4f5c] mb-6">
-                Interested in this product?
+            <div className={`mt-12 p-8 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl border-2 border-[#3d4f5c] transition-all duration-700 delay-300 ${contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-2xl font-bold text-[#3d4f5c] mb-4">
+                If you are interested, contact us
               </h2>
               <p className="text-gray-600 mb-6">
-                Contact us today to discuss your requirements and receive a detailed quote.
+                Reach out to discuss your requirements and receive a detailed quote.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
